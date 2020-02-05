@@ -10,7 +10,7 @@ function ItemNav() {
                 <NavLink
                     to="/"
                     exact
-                    activeStyle={{ color: 'grey' }}
+                    activeStyle={{ color: 'black' }}
                     className="nav-link"
                 >
                     Home
@@ -19,7 +19,7 @@ function ItemNav() {
             <li>
                 <NavLink
                     to="/about"
-                    activeStyle={{ color: 'grey' }}
+                    activeStyle={{ color: 'black' }}
                     className="nav-link"
                 >
                     About

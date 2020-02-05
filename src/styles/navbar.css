@@ -1,7 +1,7 @@
 .nav-link {
     background: transparent;
     border: none;
-    color: black;
+    color: white;
     font-size: 3vw;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -14,6 +14,7 @@ li {
 
 .navbar {
     display: flex;
-
-    padding-bottom: 0.5vw;
+    float: right;
+    padding: 1.5rem;
+    opacity: 25%;
 }
