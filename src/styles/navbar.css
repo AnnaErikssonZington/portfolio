@@ -1,0 +1,19 @@
+.nav-link {
+    background: transparent;
+    border: none;
+    color: black;
+    font-size: 3vw;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.navbar {
+    display: flex;
+
+    padding-bottom: 0.5vw;
+}
