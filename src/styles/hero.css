@@ -1,0 +1,40 @@
+/* .heroImg {
+    width: 100%;
+    opacity: 80%;
+   
+    object-fit: cover;
+} */
+
+.heroImgContainer {
+    width: 100%;
+    z-index: -1;
+}
+.heroImgContainer:after {
+    content: '';
+    background-image: linear-gradient(to top, white, rgba(239, 239, 239, 0));
+    position: absolute;
+    height: 100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.heroImgContainer img {
+    width: 100%;
+}
+
+.title {
+    font-family: Arial Black, Gadget, sans-serif;
+    color: white;
+    font-size: 4vw;
+    width: 70%;
+    text-transform: uppercase;
+    position: absolute;
+    transform: translate(20%, 100%);
+    opacity: 50%;
+    text-align: center;
+}
+.heroWrapper {
+    position: relative;
+    height: 100%;
+}

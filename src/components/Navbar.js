@@ -16,6 +16,7 @@ function ItemNav() {
                     Home
                 </NavLink>
             </li>
+
             <li>
                 <NavLink
                     to="/about"
@@ -52,9 +53,9 @@ export default class Navbar extends React.Component {
     render() {
         const { selectedTab } = this.state;
         return (
-            <React.Fragment>
+            <div>
                 <ItemNav selected={selectedTab} onUpdateItem={this.updateTab} />
-            </React.Fragment>
+            </div>
         );
     }
 }

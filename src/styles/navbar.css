@@ -12,9 +12,15 @@ li {
     list-style-type: none;
 }
 
+.navbar li {
+    display: inline-block;
+}
+
 .navbar {
     display: flex;
-    float: right;
-    padding: 1.5rem;
+    width: 100%;
+    padding-top: 1.5rem;
     opacity: 25%;
+    position: absolute;
+    left: 75%;
 }

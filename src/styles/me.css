@@ -1,0 +1,21 @@
+.meWrapper {
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    text-align: center;
+    padding: 5rem;
+    font-size: 3vw;
+    color: #257ca3;
+    opacity: 0.3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.meInfo {
+    padding-top: 3rem;
+    font-size: 1vw;
+    width: 50%;
+    color: black;
+}
