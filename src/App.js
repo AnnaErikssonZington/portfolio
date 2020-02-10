@@ -1,23 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Prismic, { Predicates } from 'prismic-javascript';
 
 import './styles/App.css';
 
-import Home from './components/Home';
-import About from './components/About';
+import Layout from './components/Layout';
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-
-// const apiEndpoint = 'https://annasportfolio.cdn.prismic.io/api/v2';
+const apiEndpoint = 'https://annasportfolio.cdn.prismic.io/api/v2';
 
 const App = () => {
-    return (
-        <Router>
-            <div>
-                <Route exact path="/" component={Home} />
-                <Route path="/about" component={About} />
-            </div>
-        </Router>
-    );
+    const [prismicData, setPrismicData] = useState({
+        data: null
+    });
+    const client = Prismic.client(apiEndpoint);
+
+    useEffect(() => {
+        const fetchPrismicData = async () => {
+            try {
+                const dataFromPrismic = await client.query(
+                    // Predicates.at('my.page.uid', 'projects')
+                    Predicates.at('document.type', 'page')
+                );
+                setPrismicData({ data: dataFromPrismic.results });
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchPrismicData();
+    }, []);
+
+    return <Layout props={prismicData} />;
 };
 
 export default App;

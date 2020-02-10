@@ -1,4 +1,25 @@
 .projectWrapper {
+    background-color: white;
+}
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80vw;
     background-color: #89a7c9;
-    height: 400px;
+    justify-content: center;
+    color: white;
+    margin: auto;
+}
+.left {
+    grid-area: -1 / 1;
+}
+
+/* .projectTextContainer {
+    width: 50vw;
+} */
+/* .projectImageContainer {
+    width: 50vw;
+} */
+.projectImage {
+    width: 100%;
 }
