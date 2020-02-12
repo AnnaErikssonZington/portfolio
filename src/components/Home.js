@@ -1,15 +1,14 @@
 import React from 'react';
-import Hero from './Hero';
-import Me from './Me';
+
+import { getComponentFromSlice } from '../utility';
+
 import '../styles/home.css';
-import Projects from './Projects';
 
 const Home = props => {
     return (
         <div className="container">
-            <Hero />
-            <Me />
-            <Projects props={props.props} />
+            {props.props &&
+                props.props.data.body.map(item => getComponentFromSlice(item))}
         </div>
     );
 };

@@ -5,7 +5,7 @@ import About from './About';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const Layout = ({ props }) => {
-    const getComponentFromName = (uid, item) => {
+    const getPageFromUID = (uid, item) => {
         switch (uid) {
             case 'home':
                 return (
@@ -34,9 +34,7 @@ const Layout = ({ props }) => {
         <React.Fragment>
             <Router>
                 {props.data &&
-                    props.data.map(item =>
-                        getComponentFromName(item.uid, item)
-                    )}
+                    props.data.map(item => getPageFromUID(item.uid, item))}
             </Router>
         </React.Fragment>
     );
