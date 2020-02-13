@@ -3,7 +3,6 @@ import '../styles/project.css';
 
 const Project = props => {
     const title = props.props.primary.title[0].text;
-    const text = props.props.primary.rich_content[0].text;
     const image_position = props.props.primary.image_position;
     const image_url = props.props.primary.image.url;
     let link_url = props.props.primary.url.url;
@@ -14,7 +13,6 @@ const Project = props => {
             <div className={`gridContainer ${image_position} `}>
                 <div className="projectTextContainer">
                     <h3 className="projectTitle">{title}</h3>
-                    {/* <p className="smallText">{text}</p> */}
                     <div className="technologies">
                         <p className="smallText"> {technologies}</p>
                     </div>

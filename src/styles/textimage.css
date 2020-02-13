@@ -1,0 +1,47 @@
+/* .TextImageImg {
+    height: 250px;
+} */
+.TextImageImg img {
+    width: 30vw;
+    height: 30vw;
+    object-fit: cover;
+}
+.TextImageTitle {
+    text-align: center;
+    font-size: 3vw;
+    padding: 3rem;
+    color: #145214;
+    opacity: 0.3;
+}
+.TextImageText {
+    opacity: 0.3;
+    width: 50%;
+    font-size: 2vw;
+    text-align: justify;
+}
+.TextImageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+@media screen and (max-width: 700px) {
+    .TextImageContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .TextImageText {
+        width: 100%;
+        padding-bottom: 4rem;
+        padding: 1rem;
+    }
+    .TextImageTitle {
+        font-size: 2rem;
+    }
+    .TextImageImg img {
+        width: 20rem;
+        height: 20rem;
+        object-fit: cover;
+    }
+}

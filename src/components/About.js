@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
-import Body from './Body';
+import React from 'react';
+import { getComponentFromSlice } from '../utility';
 
-export default class About extends Component {
-    render() {
-        return (
-            <div>
-                <Body />
-                About
-            </div>
-        );
-    }
-}
+const About = props => {
+    return (
+        <div className="container">
+            {props.props &&
+                props.props.data.body.map(item => getComponentFromSlice(item))}
+        </div>
+    );
+};
+export default About;
