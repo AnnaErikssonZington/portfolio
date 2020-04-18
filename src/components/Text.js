@@ -6,9 +6,9 @@ const Text = props => {
     const text = props.props.primary.text[0].text;
 
     return (
-        <div className="meWrapper">
+        <div className='meWrapper'>
             <h4>{title}</h4>
-            <p className="meInfo">{text}</p>
+            <p className='meInfo'>{text}</p>
         </div>
     );
 };
