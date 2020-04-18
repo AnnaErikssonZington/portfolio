@@ -6,9 +6,11 @@ import '../styles/home.css';
 
 const Home = props => {
     return (
-        <div className="container">
+        <div className='container'>
             {props.props &&
-                props.props.data.body.map(item => getComponentFromSlice(item))}
+                props.props.data.body.map((item, index) =>
+                    getComponentFromSlice(item, index)
+                )}
         </div>
     );
 };

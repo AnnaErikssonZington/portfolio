@@ -11,18 +11,18 @@ const Project = props => {
     return (
         <React.Fragment>
             <div className={`gridContainer ${image_position} `}>
-                <div className="projectTextContainer">
-                    <h3 className="projectTitle">{title}</h3>
-                    <div className="technologies">
-                        <p className="smallText"> {technologies}</p>
+                <div className='projectTextContainer'>
+                    <h3 className='projectTitle'>{title}</h3>
+                    <div className='technologies'>
+                        <p className='smallText'> {technologies}</p>
                     </div>
 
-                    <a href={link_url} className="projectLink">
+                    <a href={link_url} className='projectLink'>
                         {link_url}
                     </a>
                 </div>
-                <div className="projectImageContainer">
-                    <img src={image_url} className="projectImage" alt={title} />
+                <div className='projectImageContainer'>
+                    <img src={image_url} alt={title} />
                 </div>
             </div>
         </React.Fragment>

@@ -5,18 +5,18 @@ import Text from './components/Text';
 import Hero from './components/Hero';
 import TextImage from './components/TextImage';
 
-export const getComponentFromSlice = item => {
+export const getComponentFromSlice = (item, index) => {
     switch (item.slice_type) {
         case 'project':
-            return <Project props={item} />;
+            return <Project props={item} key={index} />;
         case 'hero':
-            return <Hero props={item} />;
+            return <Hero props={item} key={index} />;
         case 'text':
-            return <Text props={item} />;
+            return <Text props={item} key={index} />;
         case 'footer':
-            return <Footer props={item} />;
+            return <Footer props={item} key={index} />;
         case 'text_w_image':
-            return <TextImage props={item} />;
+            return <TextImage props={item} key={index} />;
         default:
             return <></>;
     }
